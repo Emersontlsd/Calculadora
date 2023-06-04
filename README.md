@@ -1,0 +1,76 @@
+# Calculadora
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+
+</head>
+
+<body>
+    <h1>CALCULADORA</h1>
+   
+        <p>Primeiro Número</p>
+            <input id="n1" type="number"/> </br>
+        <p>Segundo Número</p>
+            <input id="n2" type="number"/> </br> </br>
+
+        <button onclick="somar()">Somar</button>
+        <button onclick="subtrair()">Subtrair</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+
+        <p>O RESULTADO É: <span></span>
+    
+
+        <script> 
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+            // ob tem valores de n1 e n2
+            // document - indica o documento HTML definido neste arquivo
+            // getelementbyid() - procura nesta página o elemtno cujo atributo 'id' é o indicado
+            // ou seja, 'id_n1' ou 'id_n2'
+            // value é o atributo que contém o valor digitado na caixa de texto
+            
+
+            // obter a operação selecionada
+            // o metodo queryselector() vai buscar elementos para os quais a expressão seja verdadeira
+            // a expressão 'input[name="operacao"]:checked' especifica a taga <input> que tenha atributo 'name' igual a 'operacao'
+            // e que esteja marcado ('checked')
+            // 'value' é o atributo que contém o valor atribuido a esse elemento (botao de radio) que esta marcado
+
+        
+
+            // efetuar o calculo
+
+            function somar() {
+                resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+            }
+
+            function subtrair() {
+                resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+            }
+
+            function multiplicar() {
+                resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+            }
+
+            function dividir() {
+                resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+            }
+            
+
+            // mostrar o resultado 
+            
+  
+    </script>
+
+</body>
+
+</html>
